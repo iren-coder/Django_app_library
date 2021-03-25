@@ -1,0 +1,24 @@
+.links-menu h3 {
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: bold;
+    color: #312f2f;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    color: #220566;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.h3 {
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    color: #B8B8B8;
+}

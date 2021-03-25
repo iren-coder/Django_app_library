@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block title %}Publishers{% endblock %}
+{% block content %}
+    <h3 class="text-center mt-3 mb-3">{{ title }}</h3>
+    
+    <ul class="d-flex justify-content-center list-group">
+        {% for publisher in publishers %}
+            <li class="list-group-item list-group-item-info">{{ publisher }}:
+                <ul> {% for book in books %} 
+                    {% if book.publisher == publisher %} 
+                        <li>{{ book.title }}</li>
+                    {% endif %}
+                {% endfor %} </ul>
+            </li>
+        {% endfor %}
+        </ul>
+{% endblock %}
+
+

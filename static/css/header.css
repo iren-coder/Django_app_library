@@ -1,0 +1,30 @@
+.navbar {
+    display: flex;
+    box-sizing: border-box;
+    align-items: stretch;
+    justify-content: center;
+    margin: 0 auto;
+    min-height: 89px;
+    background-color:#343a40;
+}
+
+.navbar-nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    list-style: none;
+    padding: 0;
+    margin-left: 10px;  
+    }
+    
+.menu-item {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    min-height: 89px;
+}
+
+.menu-item:hover {
+    background-color: #bd2c2c;
+}
+

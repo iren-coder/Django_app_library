@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block title %}Friend's list{% endblock %}
+{% block content %}
+
+    <h3 class="text-center mt-3 mb-3">{{ title }}</h3>
+
+    <ul class="d-flex justify-content-center list-group">
+		{% for friend in friends %}
+		    <li class="list-group-item list-group-item-info">{{ friend.full_name }}:
+				<a class="text-primary" href='friend_edith/{{ friend.id }}'>Редактировать</a>
+				<a class="text-danger" href='friend_edith/{{ friend.id }}/delete'>Удалить</a>
+				<ul>
+					{% for book in friend.book.all %}
+					    <li> {{ book.author }}: "{{ book.title}}".</li>
+					{% endfor %}
+				</ul>
+			</li>
+		{% endfor %}
+	</ul>
+
+   <div class="ml-3 mt-3">
+	   <a class="btn btn-primary" href="create/">Добавить друга</a>
+   </div>
+{% endblock %}
+
+

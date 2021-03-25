@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block title %}Create books and authors{% endblock %}
+{% block content %} 
+    <form method="post">
+        {% csrf_token %}
+        {{ author_formset.management_form }}
+        <table>
+            <tbody>
+            {% for form in author_formset %}
+                <td style="padding-right: 20vw; padding-left: 20px;">{{ form.as_p }}<br></td>
+            {% endfor %}
+            </tbody>
+        </table>
+        {{ book_formset.management_form }}
+        <table>
+            <tbody>
+            {% for form in book_formset %}
+            <td style="padding-right: 10vw; padding-left: 20px;">{{ form.as_p }}<br></td>
+            {% endfor %}
+            </tbody>
+        </table>
+
+        <input style="margin-top: 5vh; margin-left: 20px;" type="submit" value="Сохранить"/>
+    </form>
+{% endblock %}
